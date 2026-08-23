@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>To My Love, Buldag 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#fff8f9;
+  color:#5f5560;
+  font-family:'Poppins', sans-serif;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  backdrop-filter: blur(14px);
+  background:rgba(255,255,255,.2);
+  z-index:1000;
+}
+
+nav a{
+  text-decoration:none;
+  color:#826f7d;
+  font-size:.95rem;
+  transition:.3s;
+}
+
+nav a:hover{
+  transform:translateY(-2px);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  padding:20px;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  background:rgba(255, 212, 220, 0.35);
+  filter:blur(70px);
+  animation:floatGlow 7s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-25px);}
+}
+
+.hero-content{
+  z-index:2;
+  max-width:700px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:4.5rem;
+  color:#b57d90;
+}
+
+.hero p{
+  margin-top:18px;
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#7f6d79;
+}
+
+.scroll{
+  margin-top:35px;
+  font-size:.95rem;
+  opacity:.7;
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(8px)}
+}
+
+/* TITLE */
+.section-title{
+  text-align:center;
+  font-size:2.8rem;
+  margin:80px 0 40px;
+  font-family:'Cormorant Garamond', serif;
+  color:#b57d90;
+}
+
+/* GALLERY */
+.gallery{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  padding-bottom:80px;
+}
+
+.photo-card{
+  overflow:hidden;
+  border-radius:26px;
+  background:white;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1.2s ease;
+}
+
+.photo-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.photo-card img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  transition:transform 6s ease;
+}
+
+.photo-card:hover img{
+  transform:scale(1.08);
+}
+
+/* LETTER */
+.letter{
+  width:90%;
+  max-width:800px;
+  margin:60px auto 100px;
+  background:rgba(255,255,255,.55);
+  backdrop-filter: blur(18px);
+  padding:45px;
+  border-radius:30px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:1.2s ease;
+}
+
+.letter.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.letter h2{
+  color:#b57d90;
+  margin-bottom:20px;
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.2rem;
+}
+
+.letter p{
+  line-height:2;
+  color:#6d6168;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#9b8791;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  nav{
+    gap:18px;
+    padding:15px;
+    flex-wrap:wrap;
+  }
+
+  .hero h1{
+    font-size:2.8rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .section-title{
+    font-size:2rem;
+  }
+
+  .photo-card img{
+    height:300px;
+  }
+
+  .letter{
+    padding:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#memories">Memories</a>
+  <a href="#letter">Letter</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Happy Birthday buldag 💖</h1>
+
+    <p>
+      Memories
+    </p>
+
+    <div class="scroll">Scroll to see our story ↓</div>
+  </div>
+</section>
+
+<h2 class="section-title" id="memories">
+  Our Memories ✨
+</h2>
+
+<div class="gallery">
+
+  <!-- 20 Photos -->
+  <div class="photo-card"><img src="1 (1).jpg"></div>
+  <div class="photo-card"><img src="1 (2).jpg"></div>
+  <div class="photo-card"><img src="1 (5).jpg"></div>
+  <div class="photo-card"><img src="1 (7).jpg"></div>
+  <div class="photo-card"><img src="1 (8).jpg"></div>
+  <div class="photo-card"><img src="1 (9).jpg"></div>
+  <div class="photo-card"><img src="1 (10).jpg"></div>
+  <div class="photo-card"><img src="1 (11).jpg"></div>
+  <div class="photo-card"><img src="1 (12).jpg"></div>
+  <div class="photo-card"><img src="1 (13).jpg"></div>
+  <div class="photo-card"><img src="1 (14).jpg"></div>
+  <div class="photo-card"><img src="1 (15).jpg"></div>
+
+</div>
+
+<div class="letter" id="letter">
+
+  <h2>For You 💌</h2>
+
+  <p>
+    Happy birthday, Kiela! 🎉❤️
+
+
+Kahit hindi na tayo ngayon at hindi na rin tayo nag-uusap tulad ng dati, gusto ko pa rin bumati sa’yo at mag-wish ng nothing but the best for you. Sana maging masaya ka sa special day mo at ma-enjoy mo bawat moment kasama ang mga taong mahalaga sa’yo. Thank you for all the memories, laughs, lessons, and moments na pinagsamahan natin. You were once a very important person in my life, and kahit wala na tayo ngayon, hinding-hindi ko pagsisisihan na nakilala kita.
+
+
+First of all, thank you sa almost three years nating pagsasama. Ang dami nating pinagdaanan—masaya, malungkot, mahirap, at minsan sobrang gulo—pero lahat ng ’yon naging parte ng buhay natin. Ang dami kong natutunan sa’yo, tungkol sa pagmamahal, patience, understanding, pagiging mature, at kung paano alagaan at pahalagahan ang isang tao. Ang dami ko ring experiences na hindi ko siguro mararanasan kung hindi dahil sa’yo. Higit sa lahat, sa’yo ko naramdaman kung ano talaga yung pakiramdam na mahalin at magkaroon ng taong tunay na kakampi.
+
+
+Thank you kasi noong tayo pa, nandiyan ka sa mga panahong kailangan kita. Sa mga problema ko, sa mga araw na hindi ako okay, at sa mga pagkakataong hindi ko alam kung ano ang gagawin ko, naging parte ka ng buhay ko at hindi mo ako basta iniwan. Kahit naging toxic ako, naging selfish, at marami akong pagkakamaling nagawa, maraming beses mo pa rin akong inintindi at binigyan ng chance. Ngayon ko mas naiintindihan kung gaano kalaki yung halaga ng mga bagay na ’yon.
+
+
+At gusto ko ring humingi ng tawad sa lahat ng pagkakamali ko. Sorry sa mga pagkakataong nasaktan kita, sa mga pagkakataong hindi ko naibigay yung effort at pagmamahal na deserve mo, at sa mga panahong imbes na maging pahinga at comfort mo ako, naging dahilan pa ako ng pagod at sakit mo. Lalo na nung araw na iniwan kita. Akala ko noon iyon yung makakabuti para sa ating dalawa, pero ngayon naiintindihan ko na hindi lahat ng desisyon na akala natin tama ay talagang tama. Pinagsisisihan ko yung mga bagay na kaya ko sanang gawin nang iba.
+
+
+Masakit sa’kin yung naging ending natin. Hindi ko ginusto na umabot tayo sa ganito, pero natutunan ko rin na minsan, kahit gaano natin kamahal ang isang tao, hindi natin kayang pilitin ang lahat na bumalik sa dati. Marami tayong memories na nabuo at marami rin tayong natutunan sa relasyon natin. Naalala ko yung mga panahong kahit may problema tayo, pinipili pa rin nating ayusin kaysa sukuan agad ang isa’t isa. Nagtutulungan tayo kapag nasa lowest point tayo at sinusubukan nating maging sandalan ng isa’t isa.
+
+
+Hanggang ngayon, marami pa ring memories natin na bigla na lang pumapasok sa isip ko. Naalala ko pa yung first meet natin at kung paano ka nagulat sa’kin HAHAHA. Naalala ko rin nung sinama kita sa puntod ni Papa para ipakilala ka. Yung mga times na tumatambay tayo sa rooftop, nag-uusap tungkol sa relationship natin, nagkukuwentuhan tungkol sa kung anu-ano, tapos tinatakot pa kita kapag dumidilim na. Hahaha. Ang simple lang ng ibang memories natin noon, pero ngayon, sila yung mga bagay na sobrang halaga sa’kin.
+
+
+Namimiss ko yung mga simpleng bagay. Yung mga kwentuhan natin, tawanan, asaran, pang-aasar sa isa’t isa, at kahit yung mga petty na away natin. Namimiss ko rin yung feeling na may taong pwede kong pagsabihan ng kahit anong nasa isip ko. Ang dami ko pa sanang gustong ikuwento sa’yo hanggang ngayon. Ang dami ko ring chismis na hindi ko nasasabi HAHAHA. Dati, ang dali lang sabihin sa’yo ng lahat. Ngayon, kailangan ko na lang sarilinin.
+
+
+Totoo rin na hanggang ngayon, may parte sa’kin na mahal ka pa rin. Hindi ko naman gustong magsinungaling tungkol sa nararamdaman ko. Pero habang sinasabi ko ’to, naiintindihan ko rin na hindi ibig sabihin na mahal pa kita ay kailangan kitang pilitin na bumalik. Kung masaya ka na ngayon at mas okay ka sa buhay mo, gusto kong respetuhin ’yon. Hindi ko gustong maging dahilan para mawala yung peace na meron ka.
+
+
+Gusto ko pa rin sanang bumalik sa’yo. Gusto ko pa ring magkaroon ng chance na bumawi at iparamdam sa’yo yung pagmamahal na dati mong hinihingi sa’kin. Naalala ko kung gaano karaming beses kang umiyak at humingi ng effort, time, attention, at pagmamahal mula sa’kin, pero hindi ko naibigay nang maayos. Ako rin mismo yung umalis kahit napakaswerte ko na sa’yo. Saka ko lang talaga narealize nang mawala ka na kung gaano kita pinahalagahan.
+
+
+Sinubukan ko lahat para mabalik ka sa buhay ko. Kinausap kita, naghintay ako, nagbago ako, at ginawa ko lahat ng kaya ko para maayos pa natin. Pero kahit anong gawin ko, wala pa rin. Siguro kailangan ko nang tanggapin na hindi na talaga tayo babalik sa dati. Masakit, pero salamat sa lahat ng memories at pagmamahal na binigay mo. Sana maging masaya ka sa taong pinili mo, kahit hindi na ako ‘yon.
+  </p>
+
+  <br>
+
+  <p>
+    Pero kung dumating man yung araw na hindi na talaga tayo magkabalikan, tatanggapin ko rin. Hindi ngayon agad, pero darating din siguro yung araw na matututunan kong tanggapin nang buo. Darating yung panahon na hindi na masakit kapag naalala kita. Darating din yung time na kaya ko nang tingnan yung mga pictures at memories natin nang hindi umaasa na babalik pa yung dati.
+
+
+Gusto kong makita kang maging successful someday. Gusto kitang makita na maabot mo yung mga pangarap mo, maging lawyer man o nurse, dahil alam kong matagal mo nang sinasabi sa’kin na gusto mong makuha yung isa sa mga iyon. Sana huwag kang susuko kahit mahirap. Sana bumalik yung spark mo sa academics at patuloy mong pagbutihin yung mga bagay na mahalaga sa’yo. I know you can do it.
+
+
+Be proud of yourself. Huwag mong hayaan na mawala yung confidence mo. Alam kong marami kang kayang gawin at marami ka pang mararating. Proud ako sa lahat ng achievements mo, kahit hindi na ako yung taong kasama mo para makita lahat ng milestones mo. Masaya ako kapag nakikita kitang nag-iimprove, nagmamature, at unti-unting nagiging better version ng sarili mo.
+
+
+At sana maging mabuti sa’yo yung mga taong nasa paligid mo ngayon. Sana magkaroon ka ng mga kaibigan na totoong kakampi mo, yung hindi ka sisiraan, hindi ka iiwan kapag may problema, at hindi ka gagawing option lang. Sana maging masaya ka sa mga taong kasama mo ngayon. Deserve mong magkaroon ng peace at genuine happiness.
+
+
+Medyo malungkot lang isipin na hindi na ako kasama sa birthday mo. Hindi na rin ako yung makakasama mo sa mga susunod na Christmas at New Year. Darating din siguro yung araw na may iba ka nang ipapakilala sa mga kamag-anak mo, at baka siya na rin yung maging isa sa 18 roses mo kapag nag-debut ka na. Hahaha. Ang bilis ng panahon. Sayang yung mga plano natin dati na ako sana yung isa sa 18 roses mo. Pero wala na eh. Ganoon talaga. May mga plano tayong akala natin mangyayari, pero minsan iba pala yung magiging takbo ng buhay.
+
+
+Masakit, pero kailangan ko ring tanggapin.
+
+
+Sana maging okay ka na sa lahat ng nangyari sa ating dalawa. Sana balang araw, kapag naalala mo ako, hindi puro sakit o masasamang bagay yung maalala mo. Sana maalala mo rin yung mga panahong masaya tayo, yung mga tawa natin, mga kalokohan, mga simpleng moments, at yung pagmamahal na minsan naging totoo para sa ating dalawa.
+
+
+Hindi ko rin ikakaila na may part sa’kin na naghihintay pa rin. May maliit na part sa’kin na umaasang baka balang araw magkaroon pa tayo ng pagkakataon. Pero hindi ko na gustong ipilit ang sarili ko sa buhay mo. Kung hindi na talaga ako parte ng future mo, matututunan kong tanggapin iyon. Ang gusto ko lang ay maging masaya ka, kahit hindi na ako yung dahilan ng happiness mo.
+
+
+Totoo yung sinabi ko sa’yo dati na kailangan ko lang magpahinga para mahanap at maibalik yung dating ako. Ngayon, masasabi kong marami akong natutunan at nag-improve ako. Hindi ko sinasabing naging perfect na ako, pero sinusubukan kong maging mas mabuting tao kaysa sa taong nakilala mo noon. Sana kahit papaano, maging proud ka rin sa progress ko.
+
+
+Andito pa rin ako kung sakaling kailangan mo ng tulong, as long as kaya ko. Hindi ko naman sinasabi ’yon para magkaroon ng dahilan na bumalik sa buhay mo. Gusto ko lang malaman mo na kahit wala na tayo, may taong minsang naging bahagi ng buhay mo na genuinely wishes you well.
+
+
+Kiela, sana mabasa mo lahat ng sinabi ko. Hindi ko ito sinulat para pilitin kang bumalik sa’kin. Hindi ko rin hinihingi na baguhin mo yung desisyon mo. Gusto ko lang, kahit isang beses, malaman mo kung ano talaga yung nararamdaman ko at kung gaano kita pinahahalagahan.
+
+
+Thank you sa almost three years. Thank you sa love, patience, understanding, memories, effort, at lahat ng oras na binigay mo sa’kin. Thank you dahil naging parte ka ng buhay ko. Kahit hindi nagkaroon ng ending na gusto natin, hindi ibig sabihin na walang halaga yung mga panahong naging tayo.
+
+
+I love you, Kiela. At kahit hindi na tayo magkasama, magiging parte ka pa rin ng isang chapter ng buhay ko na hindi ko makakalimutan. Hindi ko alam kung hanggang kailan kita mamahalin, pero alam kong darating din yung araw na matututo akong magmahal mula sa malayo at tanggapin na minsan, may mga taong mahal natin pero hindi talaga para manatili sa buhay natin.
+
+
+Kung dumating man yung araw na tuluyan mo na akong makalimutan, okay lang. Sana lang, kapag dumating yung time na maalala mo ako, maalala mo rin na minsan may isang taong sobrang nagmahal sa’yo, kahit maraming pagkukulang at pagkakamali.
+
+
+Ito na siguro yung huling message na matatanggap mo mula sa’kin. Sinabi ko na rito lahat ng matagal ko nang gustong sabihin. Hindi ko na gustong paulit-ulit na pumasok sa buhay mo kung kailangan mo na ng space at peace. This time, susubukan ko nang respetuhin kung ano man ang meron tayo ngayon.
+Alam ko na naging worst boyfriend na ako dahil sa mga nagawa ko at sa mga pagkakamali ko sa’yo. Alam kong marami akong bagay na nagawa na nakasakit at pinagsisisihan ko lahat. Hindi ko hinihingi na kalimutan mo agad lahat, pero gusto ko lang malaman mo na sincere ako sa paghingi ng tawad. Sana balang araw, mapatawad mo ako. I’m truly sorry for everything. Yun lang:) 
+
+I hope this new chapter of your life brings you more happiness, peace, success, and genuine people. Sana matupad lahat ng dreams and goals mo. Sana maging proud ka sa sarili mo. Sana lagi mong alagaan ang sarili mo at huwag mong kalimutan kung gaano ka kahalaga.
+
+Take care of yourself always. Enjoy your special day. Advance Merry Christmas and Happy New Year na rin. Sana maging masaya ang birthday mo at sana maging maganda ang mga susunod na taon ng buhay mo.
+
+Happy birthday ulit, Kiela. 🎉❤️
+
+Thank you for being one of the most beautiful parts of my past. Thank you for the almost three years. Thank you for everything.
+
+I’ll always be proud of you.
+
+And this time, kahit masakit, I’ll let you go.
+
+Happy birthday. ❤️
+
+  </p>
+
+</div>
+
+<footer>
+  Made with ❤️ for Padurot
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{
+  threshold:0.15
+});
+
+document.querySelectorAll('.photo-card, .letter')
+.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
